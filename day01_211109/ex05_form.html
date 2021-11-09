@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그</title>
+</head>
+<body>
+    <form action="temp" method="post">
+        <!-- temp?aa=ㅁㄴ -->
+        <!-- name 속성 값 : 서버로 요청할 때 데이터를 담는 파라미터(변수) 이름 -->
+       <!-- 요청주소?변수=내용 -->
+        입력1: <input type="text" name="aa">
+        <!-- temp?aa=ㅋㅋ&bbb=ㅇㅇㅇ -->
+        <!-- 두개 이상 요청할 때 & -->
+        입력2: <input type="text" name="bbb" placeholder="검색어 입력">
+        <!-- temp?aa=자바&bbb=데이터&ccc=감자 -->
+        입력3: <input type="text" name="ccc">
+        <input type="submit" value="전송">
+
+    </form>
+
+
+
+
+
+</body>
+</html>
