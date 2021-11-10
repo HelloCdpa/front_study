@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크태그 연습</title>
+    <style> 
+    /* 태그 스타일 적용, 태그선택자*/
+    a {
+        color: red;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    /* 해당요소에 마우스를 올렸을 때 : hover 가상선택자 :으로 선택함 */
+    a:hover {
+        color: rosybrown;
+        background-color: blanchedalmond;
+    }
+    
+    </style>
+</head>
+<body>
+    <!--아마존 홈페이지로 이동하는 링크(새창으로 이동)-->
+    <a href="https://www.amazon.com/" target="_blank" >아마존으로 이동</a> <br>
+    <!-- 쿠팡 링크로 이동하는 -->
+    <a href="https://www.coupang.com/">쿠팡으로 이동</a>
+    <!-- 이미지를 클릭했을 때 링크-->
+    <a href="http://www.apple.com" target="_balnk">
+    <!-- src : 출력-->
+    </a>
+    <img src="../images/강아지1.jpg" alt="엑박 뜰때 나오는 글">
+    <a><img src="../images/강아지.jpg" alt="dogimage"> 선택</a>
+    
+</body>
+</html>

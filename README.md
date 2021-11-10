@@ -96,4 +96,15 @@ int a = 10;
 - type 속성
     - text : 텍스트 입력칸이 만들어짐
     - submit : from 태그에 작성한 내용을 action 속성에 작성한 주소로 보낼 수 있음
-    [https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=자바](https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EC%9E%90%EB%B0%94)
+
+- 네이버 검색창을 분석해보자
+ - 네이버 검색 요청 주소 : https://search.naver.com/search.naver
+ - 검색어를 담는 파라미터 이름 : query
+ - 검색 요청 방식 : get
+
+3. 이름을 일관성 있게
+- front 화면의 name 속성값, DTO 클래스 필드이름, DB컬럼명을 모두 동일하게 가는 것이 정신건강에 좋다.
+
+## 수업내용 2일차 (20211110)
+1. js 프레임워크
+- react.js, node.js, vue.js~~

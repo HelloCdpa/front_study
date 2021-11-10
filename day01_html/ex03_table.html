@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 연습</title>
+    <style>
+        /* 여러개의 태그를 동시에 선택할 때는 ,로 구분 */
+        table,
+        th,
+        tr,
+        td {
+            /* 두께 선모양 색깔 
+            px(pixel):픽셀 화면을 구상하는 점. 해상도 - 점의 수 많을 수록 좋음 */
+            /* border: 2px solid rgb(94, 255, 0);
+            border: 2px dotted; */
+            border: 2px double;
+            /* 선 합치기 */
+            border-collapse: collapse;
+            /* 텍스트 중앙정렬 */
+            text-align: center;
+        }
+        /* even 짝수 odd 홀수 */
+        tr:nth-child(even){
+            background-color: aqua;
+        }
+        tr:nth-child(odd){
+            background-color: yellow;
+        }
+        tr:nth-child(1) {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table(가장 기본으로 있어야 뒤에 것 사용), 
+        tr : 새로운 행을 추가할 때
+        td : 새로운 열을 추가할 때 
+        th : 열 제목 
+        thead / tbody : t 헤드와 t 바디를 구분할 때
+        -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>내용</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>가</td>
+                <td>다</td>
+                <td rowspan="2">라</td>
+                <!-- rowspan 위아래 합친다 셀병합 -->
+            </tr>
+            <!-- 한 줄이 새로 생긴다 -->
+            <tr>
+                <td colspan="2">나</td>
+                <!-- colspan 옆을 합친다 -->
+                <td>마</td>
+            </tr>
+            <tr>
+                <td>바</td>
+                <td>사</td>
+                <td>아</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</body>
+
+</html>
