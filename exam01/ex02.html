@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1() {
+            let ele1 = document.querySelector(".class")
+            console.log(ele1.innerHTML);
+            
+            let ele2 = document.getElementById("id1")
+            console.log(ele2.innerHTML);
+
+            let ele3 = document.getElementsByClassName("class")
+            console.log(ele3);
+        }
+
+        function fun2() {
+            let ele1 = document.getElementById("id1")
+            ele1.innerHTML = "저는 박혜린인데여" 
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    <ol>
+        <button onclick="fun1()"><li> 안녕하세요 </li></button>
+        <button onclick="fun2()"><li>눌러보세요!!</li></button>
+    </ol>
+
+   <p class="class">
+       안냥하세여
+   </p>
+
+   <p class="class">
+        누구세여
+    </p>
+
+   <p id="id1">
+       오늘의 날씨는 맑음
+   </p>
+
+    
+</body>
+</html>

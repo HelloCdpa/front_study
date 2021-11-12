@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: #77c966;
+            padding: 0.5cm;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #f0f5ef;
+            background-color: #66915e;
+        }
+        ol {
+            list-style-type: lower-roman;
+            
+
+        }
+         
+    </style>
+    <a href="https://naver.com"><h1>Naver</h1></a>
+    
+
+
+</head>
+<body>
+    
+    <form action="aa" method="get">
+
+
+        <label for="id"><b>아이디<b> </label><br>
+        <input type="text" name="id" id="id" placeholder="아이디"><br>
+ 
+    <label for="pw">비밀번호</label><br>
+    <input type="password" name="pw" id="pw" placeholder="비밀번호 13자 이상"><br>
+
+    <label for="pw2">비밀번호 재확인</label><br>
+    <input type="password" name="pw2" id="pw2"><br>
+
+    <label for="name">이름</label><br>
+    <input type="text" name="name" id="name"><br>
+
+    <label for="date">생년월일</label><br>
+    <input type="date" id="date" name="date"><br>
+
+    성별 <br>
+    <select name="gender">
+        <option selected>성별</option>
+        <option value="w">여자</option>
+        <option value="m">남자</option>
+        <option value="no">선택안함</option>
+    </select><br>
+
+    휴대전화<br>
+    <input type="number" name="phone" placeholder="전화번호 입력">  
+    <button style="background-color: green;">인증번호 받기</button>
+    <input type="number" name="innum" placeholder="인증번호를 입력하세요"><br>
+
+    어떤 경로로 가입하게 되셨습니까?<br>
+    <input type="checkbox" name="what" value="네이버">네이버 <br>
+    <input type="checkbox" name="what" value="페이스북">페이스북<br>
+    <input type="checkbox" name="what" value="tv">tv광고<br>
+   
+    지켜주세요! 
+    <ol>
+        <li>좋은말 쓰기</li>
+        <li>탈퇴안하기</li>
+        <li>개인정보 지키기</li>
+    </ol>
+
+
+    <input type="submit" value="가입하기">
+
+    </form>
+
+</body>
+</html>
