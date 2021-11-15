@@ -21,9 +21,12 @@ ele1.addEventListener('click', function () {
     
 })
 
+ele2.addEventListener('click', promptFunction)
+
 function promptFunction() {
-    console.log('promptFunction 호출')
+    console.log('promptFunction 호출');
+    const result = prompt("프롬프트함수");
+    console.log(result);
 }
 
-ele2.addEventListener('click', promptFunction)
 

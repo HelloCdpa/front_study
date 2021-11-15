@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./ex05.js"defer></script>
+    
+
+
+
+</head>
+<body>
+    아이디<br>
+    <input type="text" id="id" onblur="idCheck()" maxlength="20"><br>
+    <span id="idCheckResult"></span><br>
+
+    비밀번호<br>
+    <input type="password" id="password" onblur="passwordC()" placeholder="비밀번호 입력"><br>
+    <span id="pass"></span><br>
+
+    비밀번호 재확인<br>
+    <input type="password" id="repassword" onkeyup="rePasswordC()"><br>
+    <span id="repass"></span><br>
+
+
+    이름<br>
+    <input type="text" id="name"><br>
+    생년월일<br>
+    <input type="date" id="date"><br>
+    성별 <br>
+    
+    이메일<br>
+    <input type="text" name="emailId">@<input type="text" id="emailSelect" name="domain">
+
+    <select type="text" id="email" onchange="emailSelect()">
+    <option>직접입력</option>
+    <option value="naver.com">naver.com</option>
+    <option value="daum.net">daum.net</option>
+    <option value="nate.com">nate.com</option>
+    </select>
+
+</body>
+</html>
