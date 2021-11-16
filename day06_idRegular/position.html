@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식요소에 대한 위치를 지정할 때는 부모요소에 
+            position : relative를 반드시 지정해야
+            부모요소 안에서 위치를 잡을 수 있음 */
+        div{
+         color: #db56a4;   
+        }
+
+
+        .wrap{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            position: relative;
+        }
+        .container{
+            width: 300px;
+            background-color: #f7ee9e;
+            /* position: relative; */
+        }
+        .container .item{
+            border: 4px dashed #db56a4;
+            background-color: #fc58cba9
+        }
+        /* item 중 1번째 자식요소 */
+        .container .item:nth-child(1){
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        .container .item:nth-child(2){
+            width: 100px;
+            height: 100px;
+            /* 배치 할 때 부모 relative가 자리에 없으면 html로 기준잡음*/
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .container .item:nth-child(3){
+            width: 100px;
+            height: 100px;
+            /* 배치 할 때 부모 relative가 자리에 없으면 html로 기준잡음*/
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+
+    </div>
+</div>
+
+    
+
+</body>
+</html>

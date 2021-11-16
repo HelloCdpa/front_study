@@ -6,31 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./ex05.js"defer></script>
-    
+    <style>
+        input{
+            /* input 태그에 대한 스타일 지정 */
+            display: block;
+            /* input 태그 : 인라인 요소 */
+            /* width : 가로폭 정하기 */
+            width : 300px;
+            /* w x h x d */
+            height: 20px;
+        }
+    </style>
 
 
 
 </head>
 <body>
     아이디<br>
-    <input type="text" id="id" onblur="idCheck()" maxlength="20"><br>
+    <input type="text" id="id" onblur="idCheck()" maxlength="20">
     <span id="idCheckResult"></span><br>
 
     비밀번호<br>
-    <input type="password" id="password" onblur="passwordC()" placeholder="비밀번호 입력"><br>
+    <input type="password" id="password" onblur="passwordC()" placeholder="8~20 자리">
     <span id="pass"></span><br>
 
     비밀번호 재확인<br>
-    <input type="password" id="repassword" onkeyup="rePasswordC()"><br>
+    <input type="password" id="repassword" onkeyup="rePasswordC()" placeholder="한번 더 입력">
     <span id="repass"></span><br>
 
 
     이름<br>
-    <input type="text" id="name"><br>
+    <input type="text" id="nameCheck" onblur="nameCheck()"><br>
+    <span id="name"></span><br>
+
     생년월일<br>
     <input type="date" id="date"><br>
+
     성별 <br>
-    
+    <select name="gender" id="gender">
+        <option>선택</option>
+        <option value="man">남자</option>
+        <option value="woman">여자</option>
+        <option value="non">선택안함</option>
+    </select><br>
+
+    전화번호 : <input type="text" id="phone" onblur="phoneCheck()">
+    <span id="phone-check-result"></span><br>
+
+
+
+
     이메일<br>
     <input type="text" name="emailId">@<input type="text" id="emailSelect" name="domain">
 

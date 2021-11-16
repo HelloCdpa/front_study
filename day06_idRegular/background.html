@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+
+
+        .div1 {
+            width: 600px;
+            height: 600px;
+            background-color: orange;
+            /* 그림을 배경으로 넣기*/
+            background-image: url(../images/star.jpg);
+            /* background-repeat: no-repeat; */
+            /* x축 시작점을 기준으로 떨어진 위치 */
+            /* background-repeat: repeat-x; */
+            background-position: center;
+            /* contain : 가로 세로 중 짧은 쪽으로 그림 크기를 맞춤 */
+            /* background-size: contain; */
+            /* cover : 가로 세로 중 넓은 쪽으로 그림 크기를 맞춤 */
+            /* background-size: cover; */
+
+            /* 스크롤해도 그림이 고정 */
+            background-attachment: fixed;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+</body>
+</html>

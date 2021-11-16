@@ -9,6 +9,7 @@ function idCheck(){
     console.log(idValue.length)
     const idLength = idValue.length
     let reult = document.getElementById('idCheckResult')
+
     if(idLength == 0){
         console.log('필수항목입니다')
         reult.innerHTML = '필수항목입니다'
@@ -25,7 +26,6 @@ function idCheck(){
     }
 
 
-
 }
 function emailSelect(){
     const email = document.getElementById('email');
@@ -33,36 +33,66 @@ function emailSelect(){
     emailSel.value =  email.value;
 }
 
-let passCheck; 
 
 function passwordC(){
+
 const password = document.getElementById('password').value;
 let passLen= password.length  
 
 let pass = document.getElementById('pass')
+const exp2 = /^(?=.*[a-z])(?=.*\d)(?=.*[-_!*])[a-z\d-_!*]{8,20}$/; 
 
-if(passLen == 0){
+
+// if(passLen == 0 ){
+//     pass.innerHTML = '필수항목입니다.';
+//     pass.style.color = 'red';
+// }else if(passLen<=8 || passLen>=20){
+//     pass.innerHTML = '8~20자리로 입력해주세요.';
+//     pass.style.color = 'red';
+// }else{
+//     pass.innerHTML = '좋습니다';
+//     pass.style.color = 'green';
+// }
+
+if(password.match(exp2)){
+    pass.innerHTML = '좋습니다';
+    pass.style.color = 'green';
+}else if(passLen == 0){
     pass.innerHTML = '필수항목입니다.';
     pass.style.color = 'red';
-}else if(passLen<8 || passLen>20){
+} else if(passLen<=8 || passLen>=20){
     pass.innerHTML = '8~20자리로 입력해주세요.';
     pass.style.color = 'red';
 }else{
-    pass.innerHTML = '좋습니다';
-    pass.style.color = 'green';
-    passCheck = password;
+    pass.innerHTML = '소문자, 특수기호 포함해주세요';
+    pass.style.color = 'red';
 }
+
+//선생님 답
+// if(!password.match(exp2)){
+//     pass.innerHTML = '8~20자리로 입력, 소문자, 특수기호 포함해주세요';
+//     pass.style.color = 'red';
+// }else if(passLen == 0){
+//     pass.innerHTML = '필수항목입니다.';
+//     pass.style.color = 'red';
+// }else{
+//     pass.innerHTML = '좋습니다';
+//     pass.style.color = 'green';
+// }
+
+
 
 }
 
 function rePasswordC(){
+const password = document.getElementById('password').value;
 const rePassword = document.getElementById('repassword').value;
-// const password = document.getElementById('password');
 const repass = document.getElementById('repass');
-console.log(passCheck);
+
+console.log(password);
 console.log(rePassword);
 
-if (rePassword === passCheck){
+if (rePassword == password){
     repass.innerHTML = '비밀번호가 일치합니다'
     repass.style.color = 'green';
 }else{
@@ -71,11 +101,38 @@ if (rePassword === passCheck){
 
 }
 
+}
+
+function nameCheck(){
+    const name = document.getElementById('nameCheck').value;
+    nameLen = name.length;
+
+    const nameCheck = document.getElementById('name');
+    if(nameLen==0){
+        nameCheck.innerHTML = '필수 항목 입니다.'
+        nameCheck.style.color = 'red';
+    }
+
 
 
 }
 
+function phoneCheck(){
+    // 자릿수가 3 - 4 - 4 인지
+    const exp = /^\d{3}-\d{4}-\d{4}$/;
+    const phone = document.getElementById('phone').value;
+    const result = document.getElementById('phone-check-result');
 
+    if(phone.match(exp)){
+        result.innerHTML = '유효한 형식입니다'
+        result.style.color = 'green';
+    } else{
+    result.innerHTML = '유효하지 않은 형식입니다'
+    result.style.color = 'red';
+    }
+
+
+}
 
 
 

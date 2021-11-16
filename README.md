@@ -142,3 +142,8 @@ int a = 10;
         -ex) class1 이라는 요소를 가져온다면 document.querySelector('.class1')
 - getElementByClassname()
     - 현재 html에 작성된 태그 중 특정 class속성값을 가지고 있는 요소를 가져옴 
+## 수업내용 6일차 20211116
+1. 크기단위
+- px % em rem 등
+- em : 자신의 부모의 폰트 사이즈 기준
+- rem : html폰트 사이즈(16px) 기준 (상대적)
