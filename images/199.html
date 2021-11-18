@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/lib/lightbox/css/lightbox.min.css" /><link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/style/content/font.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68" /><link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/style/content/content.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68" /><!--[if lt IE 9]><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script><![endif]--><!--[if gte IE 9]>
+<!--><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script><!--<![endif]-->
+<script src="https://t1.daumcdn.net/tistory_admin/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
+<script>
+lightbox.options.fadeDuration = 200;
+lightbox.options.resizeDuration = 200;
+lightbox.options.wrapAround = false;
+lightbox.options.albumLabel = "%1 / %2";
+</script>
+<script>var tjQuery = jQuery.noConflict(true);</script><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="icon" href="https://tistory1.daumcdn.net/tistory/3236913/c13f199a28934baaa2c47c8639d2b06d" /><link rel="apple-touch-icon" href="//img1.daumcdn.net/thumb/C180x180/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3236913%2Fattach%2F84183ad4eb034e5188a54147765e4529">
+<link rel="apple-touch-icon" sizes="76x76" href="//img1.daumcdn.net/thumb/C76x76/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3236913%2Fattach%2F84183ad4eb034e5188a54147765e4529">
+<link rel="apple-touch-icon" sizes="120x120" href="//img1.daumcdn.net/thumb/C120x120/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3236913%2Fattach%2F84183ad4eb034e5188a54147765e4529">
+<link rel="apple-touch-icon" sizes="152x152" href="//img1.daumcdn.net/thumb/C152x152/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3236913%2Fattach%2F84183ad4eb034e5188a54147765e4529">
+<meta name="google-adsense-platform-account" content="ca-host-pub-9691043933427338">
+<meta name="google-adsense-platform-domain" content="tistory.com">
+<meta name="description" content="자바에서 주로 사용되는 자료구조들에 대해 쓴 글이 여러 곳에 흩어져 있어서 한 글에 모두 정리해 봤는데 전체 종류는 아래와 같다 리스트(List) 자바 List 정의부터 출력까지 List는 자바의 자료형 중 하나로..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="https://wakestand.tistory.com/199" /><meta property="og:type" content="article"><meta property="og:url" content="https://wakestand.tistory.com/199" ><meta property="og:article:author" content=".`" ><meta property="og:site_name" content="Wakestand Island" ><meta property="og:title" content="자바 자료구조 총정리" ><meta name="by" content="Wakestand .`" ><meta property="og:description" content="자바에서 주로 사용되는 자료구조들에 대해 쓴 글이 여러 곳에 흩어져 있어서 한 글에 모두 정리해 봤는데 전체 종류는 아래와 같다 리스트(List) 자바 List 정의부터 출력까지 List는 자바의 자료형 중 하나로.." ><meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnxcwE%2FbtqCbgUw8He%2FMKi12yxr3GK8cKRxtTdW4K%2Fimg.jpg" ><meta property="article:section" content="IT 인터넷" >
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="자바 자료구조 총정리" ><meta name="twitter:description" content="자바에서 주로 사용되는 자료구조들에 대해 쓴 글이 여러 곳에 흩어져 있어서 한 글에 모두 정리해 봤는데 전체 종류는 아래와 같다 리스트(List) 자바 List 정의부터 출력까지 List는 자바의 자료형 중 하나로.." ><meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnxcwE%2FbtqCbgUw8He%2FMKi12yxr3GK8cKRxtTdW4K%2Fimg.jpg" >
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="https://wakestand.tistory.com/199" ><meta name="plink" content="https://wakestand.tistory.com/199" ><meta name="title" content="자바 자료구조 총정리" ><meta name="article:media_name" content="Wakestand Island" ><meta property="article:mobile_url" content="https://wakestand.tistory.com/m/199" ><meta property="article:pc_url" content="https://wakestand.tistory.com/199" ><meta property="article:mobile_view_url" content="https://wakestand.tistory.com/m/199" ><meta property="article:pc_view_url" content="https://wakestand.tistory.com/199" ><meta property="article:talk_channel_view_url" content="https://wakestand.tistory.com/m/199" ><meta property="article:pc_service_home" content="https://www.tistory.com" ><meta property="article:mobile_service_home" content="https://www.tistory.com/m" ><meta property="article:txid" content="3236913_199" /><meta property="article:published_time" content="2020-02-23T20:41:04+09:00" ><meta property="og:regDate" content="20200223204104" ><meta property="article:modified_time" content="2020-02-23T20:41:04+09:00" >
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"https:\/\/wakestand.tistory.com\/199"},"url":"https:\/\/wakestand.tistory.com\/199","headline":"\uc790\ubc14 \uc790\ub8cc\uad6c\uc870 \ucd1d\uc815\ub9ac","description":"\uc790\ubc14\uc5d0\uc11c \uc8fc\ub85c \uc0ac\uc6a9\ub418\ub294 \uc790\ub8cc\uad6c\uc870\ub4e4\uc5d0 \ub300\ud574 \uc4f4 \uae00\uc774 \uc5ec\ub7ec \uacf3\uc5d0 \ud769\uc5b4\uc838 \uc788\uc5b4\uc11c \ud55c \uae00\uc5d0 \ubaa8\ub450 \uc815\ub9ac\ud574 \ubd24\ub294\ub370 \uc804\uccb4 \uc885\ub958\ub294 \uc544\ub798\uc640 \uac19\ub2e4 \ub9ac\uc2a4\ud2b8(List) \uc790\ubc14 List \uc815\uc758\ubd80\ud130 \ucd9c\ub825\uae4c\uc9c0 List\ub294 \uc790\ubc14\uc758 \uc790\ub8cc\ud615 \uc911 \ud558\ub098\ub85c..","author":{"@type":"Person","name":"Wakestand .`"},"image":{"@type":"ImageObject","url":"https:\/\/img1.daumcdn.net\/thumb\/R800x0\/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnxcwE%2FbtqCbgUw8He%2FMKi12yxr3GK8cKRxtTdW4K%2Fimg.jpg","width":"800px","height":"800px"},"datePublished":"20200223T20:41:04+09:00","dateModified":"20200223T20:41:04+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/images\/openGraph\/opengraph.png","width":"800px","height":"800px"}}}</script><meta name="robots" content="max-image-preview:large">
+<!-- END STRUCTURED_DATA -->
+
+        <script data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-3123633142172661" async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
+<meta name="naver-site-verification" content="9a130cbd51acfe34397280191ccc3c229fa689b6"/>
+<meta name="google-site-verification" content="akaB16PwpvZn4G-wS88ZFCpBCbL2VU46g1ZuFSHGioQ" />
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<title>자바 자료구조 총정리</title>
+<link rel="stylesheet" href="https://tistory2.daumcdn.net/tistory/3236913/skin/style.css?_T_=1627513669">
+<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+
+.entry-content a, .post-header h1 em, .comments h2 .count {color:#04BEB8}
+.comment-form .submit button:hover, .comment-form .submit button:focus {background-color:#04BEB8}
+
+
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3123633142172661"
+     crossorigin="anonymous"></script>		
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146804586-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','UA-146804586-1');
+</script>
+<link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/plugins/TistoryProfileLayer/style.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68" />
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/plugins/TistoryProfileLayer/profile.js?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+        
+        window.TistoryBlog = {
+            basePath: "",
+            url: "https://wakestand.tistory.com",
+            tistoryUrl: "https://wakestand.tistory.com",
+			manageUrl: 'https://wakestand.tistory.com/manage',
+            token: '+L5HM1KSY1DNFUq89Xtolg=='
+        };
+        var servicePath = "";
+        var blogURL = "";
+    </script>
+
+	<script> (function() { window.orgjQuery = window.jQuery; window.jQuery = tjQuery })()</script>
+    <script type="text/javascript" defer src=https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/script/reaction/reaction-button-container.min.js?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68></script>
+    <script> (function() { window.jQuery = window.orgjQuery; delete window.orgjQuery })()</script>
+        <script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/script/_/base.js?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68"></script>
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/style/dialog.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68"/>
+            <link rel="stylesheet" type="text/css" href="//t1.daumcdn.net/tistory_admin/www/style/top/font.css">
+    <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/style/postBtn.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68"/>
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/style/component/tistory.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68" />
+        <script type="text/javascript" src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/style/revenue.css?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68"/></head>
+<body id="tt-body-page" class="layout-aside-right paging-number">
+<script type="text/javascript">
+	(function() {
+		if (!window.T) {
+			window.T = {}
+		}
+		window.T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"\/200","NEXT_PAGE":"\/198","BLOG":{"isDormancy":false,"title":"Wakestand Island"},"NEED_COMMENT_LOGIN":false,"COMMENT_LOGIN_CONFIRM_MESSAGE":"","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fwakestand.tistory.com%2F199","DEFAULT_URL":"https:\/\/wakestand.tistory.com","USER":{"name":null,"homepage":null},"ROLE_GROUP":"visitor","SUBSCRIPTION":{"status":"none","isConnected":false,"isProcessing":false,"isPending":false,"isWait":false,"isNone":true},"IS_LOGIN":false,"HAS_BLOG":false,"TOP_URL":"https:\/\/www.tistory.com","JOIN_URL":"https:\/\/www.tistory.com\/member\/join"};
+		window.appInfo = {"domain":"tistory.com","topUrl":"https:\/\/www.tistory.com","loginUrl":"https:\/\/www.tistory.com\/auth\/login","logoutUrl":"https:\/\/www.tistory.com\/auth\/logout"};
+
+        window.initData = {};
+        
+	})();
+</script>
+
+<script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/script/blog/common.js?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+<div id="acc-nav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<header id="header">
+		<div class="inner">
+			<h1>
+				<a href="/">
+					
+					
+						Wakestand Island
+					
+				</a>
+			</h1>
+			<div class="util">
+				<div class="search">
+					
+						<input type="text" name="search" value="" placeholder="검색내용을 입력하세요." onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }">
+						<button type="submit" onclick="try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){}">검색</button>
+					
+				</div>
+				<div class="profile">
+					<button type="button"><img src="https://tistory4.daumcdn.net/tistory/3236913/attach/84183ad4eb034e5188a54147765e4529" alt="블로그 이미지" /></button>
+					<nav>
+						<ul>
+							<li><a href="https://wakestand.tistory.com/manage">관리</a></li>
+							<li><a href="https://wakestand.tistory.com/manage/entry/post ">글쓰기</a></li>
+							<li class="login"><a href="#">로그인</a></li>
+							<li class="logout"><a href="#">로그아웃</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button type="button" class="menu"><span>메뉴</span></button>
+			</div>
+			<nav id="gnb">
+				<ul>		<li class="t_menu_home first">
+			<a href="/">홈</a>
+		</li>
+				<li class="t_menu_guestbook last">
+			<a href="/guestbook">방명록</a>
+		</li>
+		</ul>
+			</nav>
+		</div>
+	</header>
+	<section id="container">
+		
+			<div class="main-slider">
+				<ul>
+					<li style="background-image: url(https://tistory3.daumcdn.net/tistory/3236913/skinSetting/bc2bf0f52748458a83de1c4569dd516f);">
+						
+						
+							<span class="inner">
+								<span class="box">
+									
+								</span>
+							</span>
+						
+					</li>
+					
+					
+				</ul>
+			</div>
+		
+		<div class="content-wrap">
+			<article id="content">
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				<div class="inner">
+					
+						
+						
+						
+						
+							<div class="post-cover" style="background-image:url(https://blog.kakaocdn.net/dn/dnxcwE/btqCbgUw8He/MKi12yxr3GK8cKRxtTdW4K/img.jpg)">
+								<div class="inner">
+									<span class="category">Language/Java</span>
+									<h1>자바 자료구조 총정리</h1>
+									<span class="meta">
+										<span class="author">by Wakestand .`</span>
+										<span class="date">2020. 2. 23.</span>
+										
+									</span>
+								</div>
+							</div>
+					
+							<div class="entry-content">
+								<div class="tt_article_useless_p_margin contents_style">            <div class="revenue_unit_wrap ">
+               <div class="revenue_unit_item adsense  responsive" >
+                    <div class="revenue_unit_info">반응형</div>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle" style="display:block;" data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-3123633142172661" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({}); </script>
+               </div>
+            </div><p><figure class='imageblock alignCenter' data-filename="38ec61be11fbdf57f87c458dda579570.jpg" data-origin-width="260" data-origin-height="260"><span data-url='https://blog.kakaocdn.net/dn/dnxcwE/btqCbgUw8He/MKi12yxr3GK8cKRxtTdW4K/img.jpg' data-lightbox='lightbox' data-alt=''><img src='https://blog.kakaocdn.net/dn/dnxcwE/btqCbgUw8He/MKi12yxr3GK8cKRxtTdW4K/img.jpg' srcset='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnxcwE%2FbtqCbgUw8He%2FMKi12yxr3GK8cKRxtTdW4K%2Fimg.jpg' data-filename="38ec61be11fbdf57f87c458dda579570.jpg" data-origin-width="260" data-origin-height="260"></span></figure></p>
+<p style="text-align: center;">자바에서 주로 사용되는 자료구조들에 대해 쓴 글이</p>
+<p style="text-align: center;">여러 곳에 흩어져 있어서</p>
+<p style="text-align: center;">한 글에 모두 정리해 봤는데 전체 종류는 아래와 같다</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><b>리스트(List)</b></p>
+<figure id="og_1582457851014" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="자바 List 정의부터 출력까지" data-og-description="List는 자바의 자료형 중 하나로 배열과 비슷하지만 결정적으로 다른 점은 1. 크기를 자유롭게 설정 가능 - 배열은 처음 크기를 설정하고 나서부터는 크기 설정이 불가능하지만 리스트는 삽입과 삭제로 원하는대로.." data-og-host="wakestand.tistory.com" data-og-source-url="https://wakestand.tistory.com/107" data-og-url="https://wakestand.tistory.com/107" data-og-image="https://scrap.kakaocdn.net/dn/dEHNZf/hyE2G10DJw/cdXN3270BC1QvArhF8xNF1/img.png?width=800&amp;height=418&amp;face=0_0_800_418,https://scrap.kakaocdn.net/dn/czpAR3/hyE2uN2RCw/wbUfIsZ1P5tzUSybez3Sv1/img.png?width=800&amp;height=418&amp;face=0_0_800_418,https://scrap.kakaocdn.net/dn/bN0o1Y/hyE2AgqqzR/eTJqoRKGMyj19QngHArA5K/img.png?width=1920&amp;height=1004&amp;face=0_0_1920_1004"><a href="https://wakestand.tistory.com/107" target="_blank" rel="noopener" data-source-url="https://wakestand.tistory.com/107">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/dEHNZf/hyE2G10DJw/cdXN3270BC1QvArhF8xNF1/img.png?width=800&amp;height=418&amp;face=0_0_800_418,https://scrap.kakaocdn.net/dn/czpAR3/hyE2uN2RCw/wbUfIsZ1P5tzUSybez3Sv1/img.png?width=800&amp;height=418&amp;face=0_0_800_418,https://scrap.kakaocdn.net/dn/bN0o1Y/hyE2AgqqzR/eTJqoRKGMyj19QngHArA5K/img.png?width=1920&amp;height=1004&amp;face=0_0_1920_1004');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">자바 List 정의부터 출력까지</p>
+<p class="og-desc">List는 자바의 자료형 중 하나로 배열과 비슷하지만 결정적으로 다른 점은 1. 크기를 자유롭게 설정 가능 - 배열은 처음 크기를 설정하고 나서부터는 크기 설정이 불가능하지만 리스트는 삽입과 삭제로 원하는대로..</p>
+<p class="og-host">wakestand.tistory.com</p>
+</div>
+</a></figure>
+<p style="text-align: center;"><b>셋(Set)</b></p>
+<figure id="og_1582457964103" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="자바 Set 사용법부터 출력까지" data-og-description="일단 자바의 Set을 알아보기에 앞서서 List를 알아두면 참 좋은데 List에 대해서는 아래 글을 참고해주면 된다 자바 List 정의부터 출력까지 List는 자바의 자료형 중 하나로 배열과 비슷하지만 결정적으로 다른.." data-og-host="wakestand.tistory.com" data-og-source-url="https://wakestand.tistory.com/111" data-og-url="https://wakestand.tistory.com/111" data-og-image="https://scrap.kakaocdn.net/dn/dNMlya/hyE2EwncoY/AQ2YYY5sqHlNq6Lmvvh2jk/img.png?width=800&amp;height=557&amp;face=0_0_800_557,https://scrap.kakaocdn.net/dn/O1dfY/hyE2EC7ziA/XcGp1WMaVCsX5SBaSJddUK/img.png?width=800&amp;height=557&amp;face=0_0_800_557,https://scrap.kakaocdn.net/dn/bGpuHn/hyE2Bl5eyT/i3dZDd2tFFYLWdtcfk8pm1/img.png?width=885&amp;height=617&amp;face=0_0_885_617"><a href="https://wakestand.tistory.com/111" target="_blank" rel="noopener" data-source-url="https://wakestand.tistory.com/111">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/dNMlya/hyE2EwncoY/AQ2YYY5sqHlNq6Lmvvh2jk/img.png?width=800&amp;height=557&amp;face=0_0_800_557,https://scrap.kakaocdn.net/dn/O1dfY/hyE2EC7ziA/XcGp1WMaVCsX5SBaSJddUK/img.png?width=800&amp;height=557&amp;face=0_0_800_557,https://scrap.kakaocdn.net/dn/bGpuHn/hyE2Bl5eyT/i3dZDd2tFFYLWdtcfk8pm1/img.png?width=885&amp;height=617&amp;face=0_0_885_617');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">자바 Set 사용법부터 출력까지</p>
+<p class="og-desc">일단 자바의 Set을 알아보기에 앞서서 List를 알아두면 참 좋은데 List에 대해서는 아래 글을 참고해주면 된다 자바 List 정의부터 출력까지 List는 자바의 자료형 중 하나로 배열과 비슷하지만 결정적으로 다른..</p>
+<p class="og-host">wakestand.tistory.com</p>
+</div>
+</a></figure>
+<p style="text-align: center;"><b>맵(Map)</b></p>
+<figure id="og_1582457948343" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="자바 Map 사용법부터 출력까지" data-og-description="일단 Map의 특징을 먼저 알아보자면 Map은 선언 시 &lt;key, value&gt;로 값을 넣는다 Key와 Value는 한 쌍으로 Key로 식별하고 Value에 사용할 값을 넣는 식이다 여기서 Key는 중복이 불가능하고 동일한 Key 값으로 값.." data-og-host="wakestand.tistory.com" data-og-source-url="https://wakestand.tistory.com/112" data-og-url="https://wakestand.tistory.com/112" data-og-image="https://scrap.kakaocdn.net/dn/b5mz8f/hyE2u1zOVf/PGHzSqfZo0sHCmZcGlr401/img.png?width=800&amp;height=573&amp;face=0_0_800_573,https://scrap.kakaocdn.net/dn/kGChn/hyE2wd1vMH/Ol09gPCaWlErPpQunA8dN1/img.png?width=800&amp;height=573&amp;face=0_0_800_573,https://scrap.kakaocdn.net/dn/bP1nbp/hyE2vzqlBn/DDMC6uIaXKnNTnL3LOhpGk/img.png?width=1167&amp;height=837&amp;face=0_0_1167_837"><a href="https://wakestand.tistory.com/112" target="_blank" rel="noopener" data-source-url="https://wakestand.tistory.com/112">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/b5mz8f/hyE2u1zOVf/PGHzSqfZo0sHCmZcGlr401/img.png?width=800&amp;height=573&amp;face=0_0_800_573,https://scrap.kakaocdn.net/dn/kGChn/hyE2wd1vMH/Ol09gPCaWlErPpQunA8dN1/img.png?width=800&amp;height=573&amp;face=0_0_800_573,https://scrap.kakaocdn.net/dn/bP1nbp/hyE2vzqlBn/DDMC6uIaXKnNTnL3LOhpGk/img.png?width=1167&amp;height=837&amp;face=0_0_1167_837');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">자바 Map 사용법부터 출력까지</p>
+<p class="og-desc">일단 Map의 특징을 먼저 알아보자면 Map은 선언 시 &lt;key, value=""&gt;로 값을 넣는다 Key와 Value는 한 쌍으로 Key로 식별하고 Value에 사용할 값을 넣는 식이다 여기서 Key는 중복이 불가능하고 동일한 Key 값으로 값..&lt;/key,&gt;</p>
+<p class="og-host">wakestand.tistory.com</p>
+</div>
+</a></figure>
+<p style="text-align: center;"><b>해시테이블(Hashtable)</b></p>
+<figure id="og_1582457911599" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="자바 Hashtable 예제부터 사용법까지" data-og-description="자바에서 Hashtable은 Map을 상속받아 Key, Value 형태를 가지게 된다 Key와 Value는 한 쌍으로 사용되며 Key로 식별용 값, Value는 사용할 값을 넣는 식이다 자바 Map 사용법부터 출력까지 일단 Map의 특징을 먼.." data-og-host="wakestand.tistory.com" data-og-source-url="https://wakestand.tistory.com/190" data-og-url="https://wakestand.tistory.com/190" data-og-image="https://scrap.kakaocdn.net/dn/0Pcm7/hyE2ve5rg6/LPJu67bgpxmRPNh3Kf03nK/img.png?width=419&amp;height=228&amp;face=0_0_419_228,https://scrap.kakaocdn.net/dn/bY8AlB/hyE2t9qRiF/yLQdFIkCxuapkWJfonjxR0/img.png?width=419&amp;height=228&amp;face=0_0_419_228,https://scrap.kakaocdn.net/dn/yOU20/hyE2B0HWmn/iHRdIQRNa0Sp0kw8DwrQA0/img.png?width=859&amp;height=622&amp;face=0_0_859_622"><a href="https://wakestand.tistory.com/190" target="_blank" rel="noopener" data-source-url="https://wakestand.tistory.com/190">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/0Pcm7/hyE2ve5rg6/LPJu67bgpxmRPNh3Kf03nK/img.png?width=419&amp;height=228&amp;face=0_0_419_228,https://scrap.kakaocdn.net/dn/bY8AlB/hyE2t9qRiF/yLQdFIkCxuapkWJfonjxR0/img.png?width=419&amp;height=228&amp;face=0_0_419_228,https://scrap.kakaocdn.net/dn/yOU20/hyE2B0HWmn/iHRdIQRNa0Sp0kw8DwrQA0/img.png?width=859&amp;height=622&amp;face=0_0_859_622');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">자바 Hashtable 예제부터 사용법까지</p>
+<p class="og-desc">자바에서 Hashtable은 Map을 상속받아 Key, Value 형태를 가지게 된다 Key와 Value는 한 쌍으로 사용되며 Key로 식별용 값, Value는 사용할 값을 넣는 식이다 자바 Map 사용법부터 출력까지 일단 Map의 특징을 먼..</p>
+<p class="og-host">wakestand.tistory.com</p>
+</div>
+</a></figure>
+<p style="text-align: center;"><b>스택(Stack)</b></p>
+<figure id="og_1582457993054" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="자바 Stack 예제부터 사용방법까지" data-og-description="자바에서 Stack의 주요 특징은 나중에 넣은게 먼저 나온다는 것인데 이것을 LIFO (Last In First Out) 이라고 한다 1,2,3을 차례대로 넣고 꺼낼 시 3,2,1 순으로 나온다는 것 Stack의 주요 메소드는 아래와 같다.." data-og-host="wakestand.tistory.com" data-og-source-url="https://wakestand.tistory.com/197" data-og-url="https://wakestand.tistory.com/197" data-og-image="https://scrap.kakaocdn.net/dn/ypDbJ/hyE2CefaWh/53kKkI8Zc6a1Hkrkw5T86K/img.png?width=800&amp;height=415&amp;face=0_0_800_415,https://scrap.kakaocdn.net/dn/StZTc/hyE2GgCo8U/O9yA8hxDYOCOHfJ0egWoF1/img.png?width=800&amp;height=415&amp;face=0_0_800_415,https://scrap.kakaocdn.net/dn/WAWzi/hyE2vzpl8K/iS69QWRR0HTwXA0wY69UK1/img.png?width=966&amp;height=502&amp;face=0_0_966_502"><a href="https://wakestand.tistory.com/197" target="_blank" rel="noopener" data-source-url="https://wakestand.tistory.com/197">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/ypDbJ/hyE2CefaWh/53kKkI8Zc6a1Hkrkw5T86K/img.png?width=800&amp;height=415&amp;face=0_0_800_415,https://scrap.kakaocdn.net/dn/StZTc/hyE2GgCo8U/O9yA8hxDYOCOHfJ0egWoF1/img.png?width=800&amp;height=415&amp;face=0_0_800_415,https://scrap.kakaocdn.net/dn/WAWzi/hyE2vzpl8K/iS69QWRR0HTwXA0wY69UK1/img.png?width=966&amp;height=502&amp;face=0_0_966_502');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">자바 Stack 예제부터 사용방법까지</p>
+<p class="og-desc">자바에서 Stack의 주요 특징은 나중에 넣은게 먼저 나온다는 것인데 이것을 LIFO (Last In First Out) 이라고 한다 1,2,3을 차례대로 넣고 꺼낼 시 3,2,1 순으로 나온다는 것 Stack의 주요 메소드는 아래와 같다..</p>
+<p class="og-host">wakestand.tistory.com</p>
+</div>
+</a></figure>
+<p style="text-align: center;"><b>큐(Queue)</b></p>
+<figure id="og_1582458009225" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="자바 Queue 예제부터 사용법까지" data-og-description="자바에서 Queue는 Stack과 많이 비교되곤 하는데 자바 Stack 예제부터 사용방법까지 자바에서 Stack의 주요 특징은 나중에 넣은게 먼저 나온다는 것인데 이것을 LIFO (Last In First Out) 이라고 한다 1,2,3을 차.." data-og-host="wakestand.tistory.com" data-og-source-url="https://wakestand.tistory.com/198" data-og-url="https://wakestand.tistory.com/198" data-og-image="https://scrap.kakaocdn.net/dn/bkBZ7K/hyE2zV9cGP/TUwhI4uD7GQk3wmQVPk221/img.png?width=800&amp;height=722&amp;face=0_0_800_722,https://scrap.kakaocdn.net/dn/bt0cYe/hyE2F28VzE/SnEtBLEo8NnppEpAEUJhn1/img.png?width=800&amp;height=722&amp;face=0_0_800_722,https://scrap.kakaocdn.net/dn/bLeWcj/hyE2xD0uqf/mOG0jhvEcTxfeqO5t5my90/img.png?width=826&amp;height=746&amp;face=0_0_826_746"><a href="https://wakestand.tistory.com/198" target="_blank" rel="noopener" data-source-url="https://wakestand.tistory.com/198">
+<div class="og-image" style="background-image: url('https://scrap.kakaocdn.net/dn/bkBZ7K/hyE2zV9cGP/TUwhI4uD7GQk3wmQVPk221/img.png?width=800&amp;height=722&amp;face=0_0_800_722,https://scrap.kakaocdn.net/dn/bt0cYe/hyE2F28VzE/SnEtBLEo8NnppEpAEUJhn1/img.png?width=800&amp;height=722&amp;face=0_0_800_722,https://scrap.kakaocdn.net/dn/bLeWcj/hyE2xD0uqf/mOG0jhvEcTxfeqO5t5my90/img.png?width=826&amp;height=746&amp;face=0_0_826_746');">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">자바 Queue 예제부터 사용법까지</p>
+<p class="og-desc">자바에서 Queue는 Stack과 많이 비교되곤 하는데 자바 Stack 예제부터 사용방법까지 자바에서 Stack의 주요 특징은 나중에 넣은게 먼저 나온다는 것인데 이것을 LIFO (Last In First Out) 이라고 한다 1,2,3을 차..</p>
+<p class="og-host">wakestand.tistory.com</p>
+</div>
+</a></figure>            <div class="revenue_unit_wrap ">
+               <div class="revenue_unit_item adsense  responsive" >
+                    <div class="revenue_unit_info">반응형</div>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle" style="display:block;" data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-3123633142172661" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({}); </script>
+               </div>
+            </div><div class="container_postbtn #post_button_group">
+    <div class="postbtn_like">
+        
+<script>
+    window.ReactionButtonType = 'reaction';
+    window.ReactionApiUrl = '//wakestand.tistory.com/reaction';
+    window.ReactionReqBody = {
+        entryId: 199    }
+</script>
+<div class="wrap_btn" id=reaction-199></div>
+<script src=https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/script/reaction/reaction-button-container.min.js?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68></script>
+        <div class="wrap_btn wrap_btn_share">
+    <button type="button" class="btn_post sns_btn btn_share" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnxcwE%2FbtqCbgUw8He%2FMKi12yxr3GK8cKRxtTdW4K%2Fimg.jpg" data-title="자바 자료구조 총정리" data-description="자바에서 주로 사용되는 자료구조들에 대해 쓴 글이 여러 곳에 흩어져 있어서 한 글에 모두 정리해 봤는데 전체 종류는 아래와 같다 리스트(List) 자바 List 정의부터 출력까지 List는 자바의 자료형 중 하나로.." data-profile-image="https://tistory4.daumcdn.net/tistory/3236913/attach/84183ad4eb034e5188a54147765e4529" data-profile-name="Wakestand .`" data-pc-url="https://wakestand.tistory.com/199" data-relative-pc-url="/199" data-blog-title="Wakestand Island">
+        <span class="ico_postbtn ico_share">공유하기</span>
+    </button>
+</div>
+                <div class="wrap_btn wrap_btn_etc" data-entry-id="199" data-entry-visibility="public" data-category-visibility="public">
+    <button type="button" class="btn_post btn_etc2"><span class="ico_postbtn ico_etc">글 요소</span></button>
+</div>
+    </div>
+    <button type="button" class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="3236913" data-url="https://wakestand.tistory.com/199" data-device="web_pc">
+    <em class="txt_state">구독하기</em>
+    <strong class="txt_tool_id">Wakestand Island</strong>
+    <span class="img_common_tistory ico_check_type1"></span>
+</button>
+    <div class="postbtn_ccl" data-ccl-type="3">
+    <a href="https://creativecommons.org/licenses/by/4.0/deed.ko" target="_blank" class="link_ccl">
+        <span class="bundle_ccl">
+            <span class="ico_postbtn ico_ccl1">저작자표시</span>        </span>
+    </a>
+</div>
+    <!--
+<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="">
+        <license rdf:resource="http://creativecommons.org/licenses/by-fr/2.0/kr/" />
+    </Work>
+    <License rdf:about="http://creativecommons.org/licenses/by-fr/">
+        <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+        <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+                <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+                    </License>
+</rdf:RDF>
+-->
+</div><div class="another_category another_category_color_gray">
+<h4>'<a href="/category/Language">Language</a>&nbsp;>&nbsp;<a href="/category/Language/Java">Java</a>' 카테고리의 다른 글</h4>
+<table>
+<tr>
+<th>
+<a href="/209?category=731347" >자바 명명규칙 가이드</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2020.03.16</td>
+</tr>
+<tr>
+<th>
+<a href="/200?category=731347" >자바 동기화(Synchronized) 예제 및 사용방법</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2020.02.24</td>
+</tr>
+<tr>
+<th>
+<a href="/199?category=731347"  class ="current" >자바 자료구조 총정리</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2020.02.23</td>
+</tr>
+<tr>
+<th>
+<a href="/198?category=731347" >자바 Queue 예제부터 사용법까지</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2020.02.23</td>
+</tr>
+<tr>
+<th>
+<a href="/197?category=731347" >자바 Stack 예제부터 사용방법까지</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2020.02.23</td>
+</tr>
+<tr>
+<th>
+<a href="/190?category=731347" >자바 Hashtable 예제부터 사용법까지</a>&nbsp;&nbsp;<span>(1)</span>
+</th>
+<td>
+2020.02.17</td>
+</tr>
+</table></div></div>
+								<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-3123633142172661"
+     data-ad-slot="8463822267"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>	
+							</div>
+					
+							
+							
+							<div class="comments">
+									<h2>댓글<span class="count"><span id="commentCount199_0">0</span></span></h2>
+									<div id="entry199Comment">
+										
+
+										<form method="post" action="/comment/add/199" onsubmit="return false" style="margin: 0">
+											<div class="comment-form">
+												
+													<div class="field">
+														
+															<input type="text" name="name" placeholder="이름" value="">
+															<input type="password" name="password" maxlength="8" placeholder="비밀번호" value="">
+														
+														<div class="secret">
+															<input type="checkbox" name="secret" id="secret">
+															<label for="secret" tabindex="0">비밀글</label>
+														</div>
+													</div>
+												
+												<textarea name="comment" cols="" rows="4" placeholder="여러분의 소중한 댓글을 입력해주세요."></textarea>
+												<div class="submit">
+													<button type="submit" class="btn" onclick="addComment(this, 199); return false;">등록</button>
+												</div>
+											</div>
+										</form>
+								</div><script type="text/javascript">loadedComments[199]=true;findFragmentAndHighlight(199)</script>
+							</div>
+						
+					
+					
+
+				</div>
+
+				
+
+				
+
+		 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 글 목록 광고 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3123633142172661"
+     data-ad-slot="9752880444"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				<br>
+
+				
+					<div class="pagination">
+						<a  href='/200' class="prev ">이전</a>
+						
+							<a  href='/686'><span >1</span></a>
+						
+							<a ><span >&middot;&middot;&middot;</span></a>
+						
+							<a  href='/203'><span >477</span></a>
+						
+							<a  href='/202'><span >478</span></a>
+						
+							<a  href='/201'><span >479</span></a>
+						
+							<a  href='/200'><span >480</span></a>
+						
+							<a ><span class="selected">481</span></a>
+						
+							<a  href='/198'><span >482</span></a>
+						
+							<a  href='/197'><span >483</span></a>
+						
+							<a  href='/194'><span >484</span></a>
+						
+							<a  href='/193'><span >485</span></a>
+						
+							<a ><span >&middot;&middot;&middot;</span></a>
+						
+							<a  href='/4'><span >673</span></a>
+						
+						<a  href='/198' class="next ">다음</a>
+					</div>
+				
+			</article>
+
+			<aside id="aside" class="sidebar">
+
+					<div class="sidebar-1">
+						
+								<!-- 공지사항 -->
+								
+									<div class="notice">
+										<h2>공지사항</h2>
+										<ul>
+											
+												<li><a href="/notice/412">오라클 기초부터 실전까지 개념 정리글</a></li>
+											
+												<li><a href="/notice/410">자바 기초부터 실전까지 개념 정리글</a></li>
+											
+										</ul>
+									</div>
+								
+							
+								<!-- 카테고리 -->
+								<nav class="category">
+									<ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="/category">
+			분류 전체보기							<span class="c_cnt">(673)</span>
+			
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="/category/Language">
+						Language													<span class="c_cnt">(191)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="/category/Language/Java">
+									Java
+																			<span class="c_cnt">(96)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Language/Python">
+									Python
+																			<span class="c_cnt">(21)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Language/JavaScript">
+									JavaScript
+																			<span class="c_cnt">(27)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Language/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC">
+									알고리즘 개념정리
+																			<span class="c_cnt">(11)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Language/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4">
+									알고리즘 문제풀이
+																			<span class="c_cnt">(36)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/SQL">
+						SQL													<span class="c_cnt">(174)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="/category/SQL/Oracle">
+									Oracle
+																			<span class="c_cnt">(89)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/SQL/MySQL">
+									MySQL
+																			<span class="c_cnt">(56)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/SQL/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4">
+									문제풀이
+																			<span class="c_cnt">(29)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/Spring">
+						Spring													<span class="c_cnt">(9)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/Tools">
+						Tools													<span class="c_cnt">(125)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="/category/Tools/IntelliJ">
+									IntelliJ
+																			<span class="c_cnt">(25)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Tools/Google%20Analytics%20API">
+									Google Analytics API
+																			<span class="c_cnt">(5)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="/category/Tools/etc">
+									etc
+																			<span class="c_cnt">(95)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/Error%20%26%20Fix">
+						Error &amp; Fix													<span class="c_cnt">(129)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/%EA%B8%B0%ED%83%80%20%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC">
+						기타 개념정리													<span class="c_cnt">(45)</span>
+						
+											</a>
+
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+								</nav>
+							                        <div class="revenue_unit_wrap ">
+               <div class="revenue_unit_item adsense  responsive" >
+                    <div class="revenue_unit_info">반응형</div>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle" style="display:block;" data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-3123633142172661" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({}); </script>
+               </div>
+            </div>
+					</div>
+					<div class="sidebar-2">
+						
+								<!-- 최근글/인기글 -->
+								<div class="post-list tab-ui">
+									<div id="recent" class="tab-list">
+										<h2>최근글</h2>
+										<ul>
+											
+												<li>
+													<a href="/686">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeCpKvh%2FbtrkHnIaL8f%2FXdaJ3mF8KQtyLdRPi9POZ1%2Fimg.png" alt="" />
+														
+														<span class="title">인텔리제이 Push Cancle한⋯</span>
+														<span class="date">2021.11.12</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/685">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqTbEl%2FbtrkHLorC1h%2F6jtKY8mwKkxcMiGCcomZSk%2Fimg.png" alt="" />
+														
+														<span class="title">스프링부트 @RestControll⋯</span>
+														<span class="date">2021.11.12</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/684">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F0uq3g%2FbtrkCiBoZBA%2FBfc2Q0Za9ju1nFsLgRiSbK%2Fimg.png" alt="" />
+														
+														<span class="title">구글 애널리틱스 API 조회⋯</span>
+														<span class="date">2021.11.12</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/683">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbe0cdH%2FbtrkvKqW2yZ%2FxF4PHlWVYdexlawZV25cN0%2Fimg.png" alt="" />
+														
+														<span class="title">구글 애널리틱스 API 전체⋯</span>
+														<span class="date">2021.11.11</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/682">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FogfwY%2Fbtrkz4oNrtB%2FHRncVwzdbPY5hKvbKSsMI1%2Fimg.png" alt="" />
+														
+														<span class="title">구글 애널리틱스 API 여러⋯</span>
+														<span class="date">2021.11.11</span>
+													</a>
+												</li>
+											
+										</ul>
+									</div>
+									<div id="popular" class="tab-list">
+										<h2>인기글</h2>
+										<ul>
+											
+												<li>
+													<a href="/657">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fn4lz2%2Fbtrjb3STgwG%2FFNAmAKmODGZWF8RUURqQu0%2Fimg.png" alt="" />
+														
+														<span class="title">프로그래머스 전화번호 목⋯</span>
+														<span class="date">2021.10.29</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/656">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbx76gy%2Fbtri4Ykn767%2FbcJ4JG8hjAWY4VB629Yx11%2Fimg.png" alt="" />
+														
+														<span class="title">프로그래머스 완주하지 못⋯</span>
+														<span class="date">2021.10.28</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/655">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FchaHQI%2Fbtri5lFIvrm%2FWjkEwqV1huLkx3EKqdIs90%2Fimg.png" alt="" />
+														
+														<span class="title">자바 Objects.equals 사용⋯</span>
+														<span class="date">2021.10.28</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/654">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbKfkRz%2Fbtri6F4Eaox%2FKqjtRPnVXiqnIuZUs3Pkuk%2Fimg.png" alt="" />
+														
+														<span class="title">자바 List에 값 넣은채로⋯</span>
+														<span class="date">2021.10.28</span>
+													</a>
+												</li>
+											
+
+												<li>
+													<a href="/653">
+														
+															<img src="//i1.daumcdn.net/thumb/C58x58/?fname=https://img1.daumcdn.net/thumb/R750x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKglpu%2Fbtri6GbkNdW%2F1JuB6nBLmWhurKhrhZBir0%2Fimg.png" alt="" />
+														
+														<span class="title">자바 Stream int float do⋯</span>
+														<span class="date">2021.10.27</span>
+													</a>
+												</li>
+											
+										</ul>
+									</div>
+								</div>
+							
+								<!-- 최근댓글 -->
+								<div class="recent-comment">
+									<h2>최근댓글</h2>
+									<ul>
+										
+											<li><a href="/243#comment8855396">그냥 구글에 검색해서 합니다</a></li>
+										
+
+											<li><a href="/243#comment8854657">어떤거 보고 예제 공부하시는⋯</a></li>
+										
+
+											<li><a href="/161#comment8853802">@staticmethod도 붙여야 하나⋯</a></li>
+										
+
+											<li><a href="/272#comment8734894">정보 감사합니다~</a></li>
+										
+									</ul>
+								</div>
+							
+						
+								<!-- 전체 방문자 -->
+								<div class="count">
+									<h2>전체 방문자</h2>
+									<p class="total">876,125</p>
+									<p>Today : 2,279</p>
+									<p>Yesterday : 3,775</p>
+								</div>
+							
+					</div>
+				</aside>
+		</div>
+	</section>
+	<hr>
+	<footer id="footer">
+		<div class="inner">
+			<div class="order-menu">
+				
+				
+				
+				
+			</div>
+			<a href="#" class="page-top">TOP</a>
+			<p class="meta">Contact : wakeisle9933@gmail.com</p>
+			<p class="copyright">&copy; Wakestand island.</p>
+		</div>
+	</footer>
+</div>
+
+<script src="https://tistory2.daumcdn.net/tistory/3236913/skin/images/script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/darcula.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/scala.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+	<script>
+	    lightbox.option({
+			"fadeDuration": 200,
+		    "resizeDuration": 200,
+		    "wrapAround": false,
+			"albumLabel": "%1 / %2",
+			"fitImagesInViewport":true ,
+			"stopEvent": false
+	    })
+	</script>            <script type="text/javascript" src="//t1.daumcdn.net/tiara/js/v1/tiara.min.js"></script>
+            <script type="text/javascript">window.tiara = {"svcDomain":"user.tistory.com","section":"\uae00\ubdf0","trackPage":"\uae00\ubdf0_\ubcf4\uae30","page":"\uae00\ubdf0","key":"3236913-199","customProps":{"userId":0,"blogId":"3236913","role":"guest","filterTarget":false,"trackPage":"\uae00\ubdf0_\ubcf4\uae30","entryId":"199"},"entry":{"entryId":"199","categoryName":"Java","categoryId":"731347","author":"3802521","authorId":"3802521","image":"3802521","plink":"\/199","tags":[],"key":"3236913-199"},"sentryDsn":"https:\/\/a53520229cd744e798d42900d76b0e2a@aem-collector.daumkakao.io\/713","kakaoAppKey":"b8aef3eeb03fa312b81795386484f051","appUserId":null};</script>
+            <script type="text/javascript" src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-ecb204072f238d987f154f2f076d38aa8468bd68/blogs/script/tiara/tiara.min.js?_version_=tistory-ecb204072f238d987f154f2f076d38aa8468bd68" defer></script>
+                        <script type="text/javascript">
+                window.roosevelt_params_queue = window.roosevelt_params_queue || [{channel_id: 'dk', channel_label: 'tistory'}];
+            </script>
+            <script type="text/javascript" src="//t1.daumcdn.net/midas/rt/dk_bt/roosevelt_dk_bt.js" async></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script><iframe style="position:absolute;width:1px;height:1px;left:-100px;top:-100px" src="//wakestand.tistory.com/api" id="editEntry"></iframe><div id="tistoryEtcLayer" class="layer_post"></div><div id="tistorySnsLayer" class="layer_post"></div></body>
+</html>
