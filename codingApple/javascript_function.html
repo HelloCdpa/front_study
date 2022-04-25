@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h2 id="hello"></h2>
+    <div class="alert-box" id="alert">Alert box
+        <button id="close" onclick="document.querySelector('#alert').style.display='none';">X</button>
+    </div>
+    <button onclick="document.querySelector('#alert').style.display = 'block';">click</button>
+
+    <div class="alert-box" id="alert2">아이디를 입력하세요
+        <button id="close2" onclick="close2()">X</button>
+    </div>
+    <button onclick="alert()">click</button>
+
+    <div class="alert-box" id="alert3">비번을 입력하세요
+        <button id="close3" onclick="funny('none')">X</button>
+    </div>
+    <button onclick="funny('block')">click</button>
+
+    <button id="btn2">버튼</button>
+
+<script>
+    document.querySelector('#hello').innerHTML = 'hi';
+    function alert(){
+        document.querySelector('#alert2').style.display='block';
+    }
+    function close2(){
+        document.querySelector('#alert2').style.display ='none';
+    }
+    function funny(what){
+        document.querySelector('#alert3').style.display = what;
+    }
+
+    document.getElementById('btn2').addEventListener('click', function(){
+        document.querySelector('#alert2').style.display='block';
+    })
+
+</script>
+
+</body>
+</html>
